@@ -1,0 +1,35 @@
+### Obtener todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar película por ID
+GET http://localhost:3000/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+### Recuperar todas las películas por un género
+GET http://localhost:3000/movies?genre=Adventure
+
+### Crear película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": 1234,
+  "year": "adsfas",
+  "director": "xd",
+  "duration": "162",
+  "poster": "encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThc9d6LzhJTPg8RxYY5YdAhRmjZaGlFSfyfp9QgHNdUeG3tHc2",
+  "genre": ["Action"],
+  "rate": 11
+}
+
+### Actualizar una película
+
+PATCH http://localhost:3000/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "title": "New Title",
+  "year": 2025,
+  "director": "New Director",
+  "duration": 120,
+  "rate": 10
+}

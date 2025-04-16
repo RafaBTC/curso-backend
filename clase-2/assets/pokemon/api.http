@@ -1,0 +1,22 @@
+# Recuperar información de un Pokemon
+GET http://localhost:1234/pokemon/ditto
+
+### Crear un Pokemon
+POST http://localhost:1234/pokemon
+Content-Type: application/json
+
+{
+  "name": "Pikachu",
+  "type": "Electric",
+  "level": 5,
+  "moves": [
+    {
+      "name": "Thunderbolt",
+      "power": 90
+    },
+    {
+      "name": "Quick Attack",
+      "power": 40
+    }
+  ]
+}
